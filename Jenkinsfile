@@ -6,15 +6,16 @@ pipeline {
         maven "MAVEN_HOME"
     }
 	
-    environment {
-      
-        NEXUS_PROTOCOL = "http"
-        NEXUS_IP = 54.196.137.6
-	NEXUS_PORT = 8081
-        NEXUS_REPOSITORY = "release"
-	NEXUS_REPOGRP_ID    = "group"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
-        ARTVERSION = "${env.BUILD_ID}"
+       environment {
+        SNAP_REPO = 'vprofile-snapshot'
+  NEXUS_USER = 'admin'
+  NEXUS_PASS = 'admin'
+  RELEASE_REPO = 'release'
+  CENTRAL_REPO = 'central'
+  NEXUSIP = '54.196.137.6'
+  NEXUSPORT = '8081'
+  NEXUS_GRP_REPO = 'group'
+        NEXUS_LOGIN = 'nexuslogin'
     }
 	
     stages{
