@@ -7,9 +7,10 @@ pipeline {
     }
 	
     environment {
-        NEXUS_VERSION = "nexus3"
+      
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "54.196.137.6:8081"
+        NEXUS_IP = 54.196.137.6
+	NEXUS_PORT = 8081
         NEXUS_REPOSITORY = "release"
 	NEXUS_REPOGRP_ID    = "group"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
